@@ -4,42 +4,30 @@ namespace Ovning1PersonalLedger
 {
     internal class Program
     {
-        //deklarera tom arrayClassCollection
-        //Person[] personList;
-        //public ArrayList personArrayList = new ArrayList();
+        private static List<Person> persons = new List<Person>();
 
-        
-        //Person newPerson = new Person("alsdjf", 17167);
         static void Main(string[] args)
         {
-            /*
-            List<Person> persons = new List<Person>();
-            Person newPerson = new Person("Else Beskow", 20000);
-            persons.Add(newPerson);
-            */
-            //Console.WriteLine("Hello, World!");
-            //Person thePerson = new Person();
-            bool displayMenu = true;
-            while (displayMenu == true)
-            {
-                
-                displayMenu = MainMenu();
-            }
 
+            bool displayMenu = true;
+            do
+            {
+                displayMenu = MainMenu();
+
+            } while (displayMenu); 
         }
 
         public static bool MainMenu()
         {
-            List<Person> persons = new List<Person>();
-            Person newPerson = new Person("Else Beskow", 20000);
-            persons.Add(newPerson);
             Console.Clear();
             Console.WriteLine("make a choice");
             Console.WriteLine("1) Add Employee");
             Console.WriteLine("2) Print ledger");
-            Console.WriteLine("3) exit");
+            Console.WriteLine("3) Play the VarGame");
+            Console.WriteLine("4) exit");
             String result = Console.ReadLine();
 
+            // byt till switch case
             if (result == "1")
             {
                 Person aperson = AddStaffer();
@@ -52,6 +40,11 @@ namespace Ovning1PersonalLedger
                 return true;
             }
             else if (result == "3")
+            {
+                PlayVarGame();
+                return true;
+            }
+            else if (result == "4")
             {
                 return false;
             }
@@ -86,6 +79,16 @@ namespace Ovning1PersonalLedger
             }
             
             Console.ReadLine();
+        }
+
+        private static void PlayVarGame()
+        {
+            Console.Clear();
+            Console.WriteLine("Type anything");
+            var anyThing = Console.ReadLine();
+            Console.WriteLine("Your input is of type: {0}", anyThing.GetType().FullName);
+            Console.ReadLine();
+
         }
     }
 
