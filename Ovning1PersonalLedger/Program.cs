@@ -106,14 +106,19 @@ namespace Ovning1PersonalLedger
             var stringA = Console.ReadLine();
             Console.WriteLine("Type a new string to compare");
             var stringB = Console.ReadLine();
-            Console.WriteLine(HelperUtils.CompareDaStrings(stringA, stringB) ? "They match" : "They don't match");  
+            Console.WriteLine(HelperUtils.CompareDaStrings(stringA, stringB) ? "They match" : "They don't match");
+            Console.WriteLine("of type: {0}",HelperUtils.SwitchStringLengthType(stringA));
+            
             Console.ReadLine(); 
+
+
         }
 
         private static void PrintMenu()
         {
             
             Console.Clear();
+            // Todo implement IEnumerable for indexcounter GetEnumerator()
             int i = 1; Console.Clear();
             foreach (string menuText in MenuHelpers.MenuCollection2Print())
             {
