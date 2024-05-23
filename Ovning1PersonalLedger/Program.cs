@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using PersonalLedger.HelpersPractice;
 
 namespace Ovning1PersonalLedger
 {
@@ -19,39 +20,46 @@ namespace Ovning1PersonalLedger
 
         public static bool MainMenu()
         {
-            Console.Clear();
-            Console.WriteLine("make a choice");
-            Console.WriteLine("1) Add Employee");
-            Console.WriteLine("2) Print ledger");
-            Console.WriteLine("3) Play the VarGame");
-            Console.WriteLine("4) exit");
+
+            PrintMenu();
             String result = Console.ReadLine();
 
             // byt till switch case
-            if (result == "1")
+            switch (result)
             {
-                Person aperson = AddStaffer();
-                persons.Add(aperson);
-                return true;
+                case MenuHelpers.Add:
+                    {
+                        Person aperson = AddStaffer();
+                        persons.Add(aperson);
+                        break;
+                    }
+                case MenuHelpers.PrintLedger:
+                    {
+                        PrintLedger(persons);
+                        break;
+                    }
+                case MenuHelpers.PlayVarGame:
+                    {
+                        PlayVarGame();
+                        break;
+                    }
+                case MenuHelpers.PractCustHelpFuncs:
+                    {
+                        PractCustHelpFuncs();
+                        break;
+                    }
+                case MenuHelpers.Quit:
+                    Environment.Exit(0);
+                    break;
+
+                default:
+                    break;
+
             }
-            else if (result == "2")
-            {
-                PrintLedger(persons);
-                return true;
-            }
-            else if (result == "3")
-            {
-                PlayVarGame();
-                return true;
-            }
-            else if (result == "4")
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
+
+            return true;
+
+            
         }
 
        
@@ -89,6 +97,30 @@ namespace Ovning1PersonalLedger
             Console.WriteLine("Your input is of type: {0}", anyThing.GetType().FullName);
             Console.ReadLine();
 
+        }
+
+        private static void PractCustHelpFuncs()
+        {
+            Console.Clear();
+            Console.WriteLine("Type a string");
+            var stringA = Console.ReadLine();
+            Console.WriteLine("Type a new string to compare");
+            var stringB = Console.ReadLine();
+            Console.WriteLine(HelperUtils.CompareDaStrings(stringA, stringB) ? "They match" : "They don't match");  
+            Console.ReadLine(); 
+        }
+
+        private static void PrintMenu()
+        {
+            
+            Console.Clear();
+            int i = 1; Console.Clear();
+            foreach (string menuText in MenuHelpers.MenuCollection2Print())
+            {
+                Console.WriteLine("{0}: {1}", i, menuText);
+                i++;
+            }
+            
         }
     }
 
