@@ -41,6 +41,7 @@ namespace PersonalLedger
         public static int CalculateYearlyWageWithOptional(int monthlyWage, int numberOfMonths, int bonus=0)
         {
             return monthlyWage * numberOfMonths + bonus;
+            // ny kommentar
         }
 
         // Named arguments not required to follow order of parameters, one or more parameters can have a name defined 
