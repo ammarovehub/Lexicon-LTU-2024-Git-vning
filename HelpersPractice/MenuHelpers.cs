@@ -20,7 +20,7 @@ namespace PersonalLedger.HelpersPractice
         //public const string PlayVarGame = "3";
         //public const string PractCustHelpFuncs = "4";
 
-
+        //Test för att se om vi kan bryta programmet
 
 
         public static List<string> MenuCollection2Print()

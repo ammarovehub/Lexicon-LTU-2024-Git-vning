@@ -31,7 +31,6 @@
             return ageGroup;
         }
 
-
         public static int SwitchAgeCategory(int inAge)
         {
             int calcPrice = 120;
