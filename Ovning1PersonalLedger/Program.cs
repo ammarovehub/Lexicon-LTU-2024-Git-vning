@@ -88,7 +88,7 @@ namespace Ovning1PersonalLedger
 
         private static void PrintMenu()
         {
-
+            // Niklas kommentar rad 91
             Console.Clear();
             // Todo implement IEnumerable for indexcounter GetEnumerator()
             int i = 0;
