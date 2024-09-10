@@ -250,7 +250,7 @@ namespace Ovning1PersonalLedger
 
     class Person
     {
-        public int Age { get; set; }
+        public int Age { get; set; } // kommentar ändring
 
         //public Person() { }
         public Person(int inAge)
