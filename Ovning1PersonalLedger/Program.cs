@@ -24,7 +24,7 @@ namespace Ovning1PersonalLedger
         {
 
             PrintMenu();
-            String resultNiklas = Console.ReadLine();
+            String resultTobias = Console.ReadLine();
 
             // byt till switch case
             switch (result)
