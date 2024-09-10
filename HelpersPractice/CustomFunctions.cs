@@ -32,31 +32,25 @@
         }
 
 
-        public static string SwitchStringLengthType(string inString)
+        public static int SwitchAgeCategory(int inAge)
         {
-            string lengthType = "undefined";
-            switch (inString.Length)
+            int calcPrice = 120;
+            switch (inAge)
             {
-                case < 5:
-                case > 10:
-                    lengthType = "outOfRange";
+                case < 21:
+                    calcPrice = 80;
                     break;
-
-                case 5:
-                    lengthType = "longer";
-                    break;
-                // interesting
-                case > 6:
-                    lengthType = "perfect";
+                                    
+                case > 64:
+                    calcPrice = 90;
                     break;
 
                 default:
                     break;
 
-
             }
 
-            return lengthType;
+            return calcPrice;
         }
     }
 }
