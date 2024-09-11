@@ -24,8 +24,8 @@ namespace Ovning1PersonalLedger
         {
 
             PrintMenu();
-            String resultTobias2 = Console.ReadLine();   // Test för att bryta...
-
+            String resultTobias = Console.ReadLine();   // Test för att bryta...
+            //ammar-features
             // byt till switch case
             switch (result)
             {
