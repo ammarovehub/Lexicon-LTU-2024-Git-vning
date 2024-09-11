@@ -55,6 +55,8 @@ namespace PersonalLedger
             int amount = 1234;
             int months = 12;
             int bonus = 500;
+			
+			int niklasInt = 300;
 
             int yearlyWageEmployee = CalculateYearlyWageExpressionBodied(amount, months, bonus);
 
